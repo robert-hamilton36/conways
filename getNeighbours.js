@@ -24,14 +24,14 @@ function getNeighbours (cellRow, cellColumn, board) {
 
     arr = []
 
-    for(var i = rowMin; i < rowMax+1; i++){
-        for(var j = columnMin; j < columnMax+1; j++){
-            if( i === cellRow && j ===cellColumn){
+    for(var i = -1; i < 2; i++){
+        for(var j = -1; j < 2; j++){
+            if( i === 0 && j === 0){
                 // cell is one checking for neighbours
                 continue
             }
             if(!indicesAreOutOfBounds(cellRow + i, cellColumn + j, board)){
-                arr.push(board[i][j])
+                arr.push(board[cellRow + i][cellColumn + j])
             }
         }
     }
