@@ -7,9 +7,6 @@ function nextBoard (currentBoard) {
 //get next board cell state
     let nextBoard = []
 
-    
-
-    console.log(currentBoard.length)
     for(var i = 0; i < currentBoard.length; i++){
         nextBoard[i] = []
         for(var j = 0; j< currentBoard[i].length; j++){
