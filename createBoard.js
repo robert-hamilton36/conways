@@ -3,7 +3,12 @@ function createBoard (size) {
     for(let i = 0; i<size; i++){
         rowi = []
         for(let j = 0; j<size; j++){
-            rowi.push(0)
+            let random = (Math.random() >= 0.9)
+            if(random){
+                rowi.push(true)
+            }else{
+                rowi.push(false)
+            }
         }
         board.push(rowi)
     }
